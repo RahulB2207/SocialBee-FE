@@ -1,0 +1,45 @@
+
+.card-post{
+    
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.799);
+    margin-left: 22%;
+    max-width: 468px;
+    height: max-content;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+.card-post img{
+    padding-left: 0;
+    width: 100%;
+    max-height: 585px;
+}
+  #text{
+    width: 90% ;
+    font-size:12px;
+    background-color: transparent;
+    outline: none;
+    
+  }
+  h3{
+    padding-bottom: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .card-content{
+    padding-left: 10px;
+  }
+
+.material-icons {
+
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+ .card-icons{
+  padding-bottom: 0;  
+
+ }
