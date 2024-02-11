@@ -1,30 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { AuthContext } from './AuthProvider';
 
 const Register = ({setProgress}) => {
   const navigate = useNavigate();
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  useEffect(() =>{
-    setProgress(30);
-    setTimeout(() => {
-        setProgress(100);
-    },1000)
-  },[])
-  useEffect(() => { 
-    setError(null);
-  }, [userName, email, password]);
-
+ const {isAuth, setIsAuth} = useContext(AuthContext)
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    setLoading(true);
-
     const userData = {
       userName,
       email,
@@ -38,23 +24,20 @@ const Register = ({setProgress}) => {
         },
         withCredentials: true,
       });
-
+  
       if (response.status === 200 || response.status === 201) {
         const token = response.data.token;
-        localStorage.setItem("token",token);
-        // Registration successful, redirect to login or confirmation page
-        navigate('/');
+        localStorage.setItem('token', token);
+        
+        setIsAuth(true); // Update the authentication state
       } else {
-        setError('Registration failed. Please try again.');
+        console.error('Invalid password', response.statusText);
       }
-    } catch (error) {
-      console.error('Error:', error.message);
-      if (error.response) {
-        console.error('Error Response:', error.response.status, error.response.statusText, error.response.data);
-      }
-      setError('An error occurred during registration. Please try again.');
+    } catch (err) {
+      console.log(err);
     } finally {
-      setLoading(false);
+      setProgress(100);
+      navigate('/'); 
     }
   };
 
@@ -93,13 +76,12 @@ const Register = ({setProgress}) => {
         </div>
 
         <div>
-          <button type="submit" disabled={loading}>
-            {loading ? 'Registering...' : 'Register'}
+          <button type="submit" >
+            signin
           </button>
         </div>
 
-        {error && <div className="error-message">{error}</div>}
-
+       
         <div>
           <Link className="form-link" to="/login">
             Have an account

@@ -9,6 +9,7 @@ import Create from "./Create";
 import SideBar from "./SideBar";
 import LoadingBar from 'react-top-loading-bar'
 import PrivateRoutes from './PrivateRoutes'
+import AuthProvider from "./AuthProvider";
 
 
 function App(){
@@ -17,8 +18,12 @@ function App(){
         
             <Router>
             <LoadingBar color='#35323a'progress={progress} onLoaderFinished={() => setProgress(0)}/>
+            
+            <AuthProvider>
             <SideBar />
                 <Routes >
+                <Route path="/login" element={<Login setProgress={setProgress}></Login>} />
+                    <Route path="/register" element={<Register setProgress={setProgress}></Register>} />
                     <Route element ={<PrivateRoutes/>}>
                     <Route exact path="/" element={<Home setProgress={setProgress} ></Home>} />
                     <Route exact path="/profile" element={<Profile setProgress={setProgress}></Profile>} />
@@ -26,10 +31,10 @@ function App(){
                     <Route path="/search" element={<Search setProgress={setProgress}></Search>} />
                     </Route>               
                    
-                    <Route path="/login" element={<Login setProgress={setProgress}></Login>} />
-                    <Route path="/register" element={<Register setProgress={setProgress}></Register>} />
+                   
 
                 </Routes>
+                </AuthProvider>
             </Router>
          
       
