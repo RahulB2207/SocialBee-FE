@@ -37,7 +37,7 @@ function SideBar() {
             </div>
             <Link to="/login" onClick={() => {localStorage.removeItem('token')
           setIsAuth(false)}}>
-                <span className="material-icons">login</span>logout
+                <span className="material-icons">logout</span>logout
               </Link>
           </>
         )}

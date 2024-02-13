@@ -30,7 +30,10 @@ const Login = ({ setProgress }) => {
   
       if (response.status === 200 || response.status === 201) {
         const token = response.data.token;
+        const userId = response.data.response.user.id;
+        console.log(userId);
         localStorage.setItem('token', token);
+        localStorage.setItem("userId",userId)
         
         setIsAuth(true); // Update the authentication state
       } else {
