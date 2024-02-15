@@ -1,18 +1,42 @@
-
+.post-container{
+  margin-left: 28%;
+}
+#userName{
+  font-size: 20px;
+  font-weight: 100;
+  font-family:"Teko"; 
+}
+#follow-button{
+  color: rgb(101, 9, 162);
+}
+.top-bar{
+  display: flex;
+  justify-content: space-between;
+}
+.top-bar-child{
+  padding-bottom: 13px;
+    padding-top: 13px;
+    padding-left: 10px;
+    padding-right: 15px;
+    margin: 0px;
+}
 .card-post{
     
     padding-bottom: 10px;
     background-color: rgba(255, 255, 255, 0.799);
-    margin-left: 22%;
+   
     max-width: 468px;
     height: max-content;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(183, 180, 180, 0.2);
     margin-bottom: 20px;
+    /* margin-top: 10px; */
 }
 .card-post img{
     padding-left: 0;
     width: 100%;
     max-height: 585px;
+    border-top: 1px solid rgba(195, 191, 191, 0.2); 
+    border-bottom: 1px solid rgba(195, 191, 191, 0.2); 
 }
   #text{
     width: 90% ;
@@ -21,11 +45,13 @@
     outline: none;
     
   }
-  h3{
-    padding-bottom: 0;
-    padding-top: 10px;
-    padding-left: 10px;
+  #follow-button:hover{
+    cursor: pointer;
   }
+  /* h3{
+   
+
+  } */
   .card-content{
     padding-left: 10px;
   }
@@ -43,3 +69,6 @@
   padding-bottom: 0;  
 
  }
+ /* .home{
+  margin-top: 4%;
+ } */

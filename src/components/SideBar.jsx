@@ -4,8 +4,7 @@ import '../css/Sidebar.css';
 import { AuthContext } from './AuthProvider';
 
 function SideBar() {
-  const { isAuth ,setIsAuth} = useContext(AuthContext);
- 
+  const { isAuth, setIsAuth } = useContext(AuthContext);
 
   return (
     <div>
@@ -17,40 +16,66 @@ function SideBar() {
           <>
             <div>
               <Link to="/">
-                <span className="material-icons">home</span>Home
+                <div className="icon-text-container">
+                  <span className="material-icons">home</span>
+                  <div>Home</div>
+                </div>
               </Link>
             </div>
             <div>
               <Link to="/profile">
-                <span className="material-icons">account_circle</span>Profile
+                <div className="icon-text-container">
+                  <span className="material-icons">account_circle</span>
+                  <div>Profile</div>
+                </div>
               </Link>
             </div>
             <div>
               <Link to="/create">
-                <span className="material-icons">edit</span>Create
+                <div className="icon-text-container">
+                  <span className="material-icons">edit</span>
+                  <div>Create</div>
+                </div>
               </Link>
             </div>
             <div>
               <Link to="/search">
-                <span className="material-icons">search</span>Search
+                <div className="icon-text-container">
+                  <span className="material-icons">search</span>
+                  <div>Search</div>
+                </div>
               </Link>
             </div>
-            <Link to="/login" onClick={() => {localStorage.removeItem('token')
-          setIsAuth(false)}}>
-                <span className="material-icons">logout</span>logout
-              </Link>
+            <Link
+              to="/login"
+              onClick={() => {
+                localStorage.removeItem('token');
+                setIsAuth(false);
+              }}
+            >
+              <div className="icon-text-container">
+                <span className="material-icons">logout</span>
+                <div>Logout</div>
+              </div>
+            </Link>
           </>
         )}
         {!isAuth && (
           <>
             <div>
               <Link to="/login">
-                <span className="material-icons">login</span>Login
+                <div className="icon-text-container">
+                  <span className="material-icons">login</span>
+                  <div>Login</div>
+                </div>
               </Link>
             </div>
             <div>
               <Link to="/register">
-                <span className="material-icons">how_to_reg</span>Signup
+                <div className="icon-text-container">
+                  <span className="material-icons">how_to_reg</span>
+                  <div>Signup</div>
+                </div>
               </Link>
             </div>
           </>

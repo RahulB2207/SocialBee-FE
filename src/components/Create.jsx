@@ -72,6 +72,7 @@ function Create({ setProgress }) {
           placeholder="add Caption"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            required
           ></textarea>
         </div>
         <div className="form-group">
@@ -84,6 +85,7 @@ function Create({ setProgress }) {
             onChange={handleImageChange}
             ref={fileInputRef}
             style={{ display: "none" }}
+            required
           />
         </div>
         <div>

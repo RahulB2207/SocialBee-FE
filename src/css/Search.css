@@ -1,16 +1,4 @@
 .main-container{
     background-color: #eee;
-    height: 100vh;
-    
-  
-  }
-  .searchBar-container{
-    padding-left: 20vh;
-    margin:auto;
-  
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 200px;
+   
   }

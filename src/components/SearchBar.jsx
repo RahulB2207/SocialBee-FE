@@ -27,7 +27,7 @@ const handleChange = (value) => {
        
     <div className='input-wrapper'>
         <FaSearch id='search-icon'></FaSearch>
-        <input placeholder='type to search....'
+        <input placeholder='type to search user....'
         value={input}
         onChange={(e)=>handleChange(e.target.value)}
         ></input>

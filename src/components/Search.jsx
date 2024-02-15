@@ -3,6 +3,7 @@ import SearchBar from './SearchBar';
 import SearchResultsList from './SearchResultsList';
 import axios from 'axios';
 
+
 function Search({setProgress}) {
   const [results, setResults] = useState([]);
   const [selectedResult, setSelectedResult] = useState(null);
