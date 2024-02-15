@@ -15,10 +15,8 @@ import AuthProvider from "./AuthProvider";
 function App(){
   const [progress, setProgress] = useState(0);
     return (
-        
             <Router>
             <LoadingBar color='#35323a'progress={progress} onLoaderFinished={() => setProgress(0)}/>
-            
             <AuthProvider>
             <SideBar />
                 <Routes >
@@ -30,9 +28,6 @@ function App(){
                     <Route exact path="/create" element={<Create setProgress={setProgress}></Create>} />
                     <Route path="/search" element={<Search setProgress={setProgress}></Search>} />
                     </Route>               
-                   
-                   
-
                 </Routes>
                 </AuthProvider>
             </Router>

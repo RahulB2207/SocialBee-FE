@@ -17,7 +17,9 @@ function SideBar() {
             <div>
               <Link to="/">
                 <div className="icon-text-container">
-                  <span className="material-icons">home</span>
+                <span class="material-symbols-rounded">
+home
+</span>
                   <div>Home</div>
                 </div>
               </Link>
@@ -25,7 +27,7 @@ function SideBar() {
             <div>
               <Link to="/profile">
                 <div className="icon-text-container">
-                  <span className="material-icons">account_circle</span>
+                  <span className="material-symbols-rounded">account_circle</span>
                   <div>Profile</div>
                 </div>
               </Link>
@@ -33,7 +35,7 @@ function SideBar() {
             <div>
               <Link to="/create">
                 <div className="icon-text-container">
-                  <span className="material-icons">edit</span>
+                  <span className="material-symbols-rounded">add_circle</span>
                   <div>Create</div>
                 </div>
               </Link>
@@ -41,7 +43,7 @@ function SideBar() {
             <div>
               <Link to="/search">
                 <div className="icon-text-container">
-                  <span className="material-icons">search</span>
+                  <span className="material-symbols-outlined">search</span>
                   <div>Search</div>
                 </div>
               </Link>
@@ -54,7 +56,7 @@ function SideBar() {
               }}
             >
               <div className="icon-text-container">
-                <span className="material-icons">logout</span>
+                <span className="material-symbols-outlined">logout</span>
                 <div>Logout</div>
               </div>
             </Link>
@@ -65,7 +67,7 @@ function SideBar() {
             <div>
               <Link to="/login">
                 <div className="icon-text-container">
-                  <span className="material-icons">login</span>
+                  <span className="material-symbols-outlined">login</span>
                   <div>Login</div>
                 </div>
               </Link>
@@ -73,7 +75,7 @@ function SideBar() {
             <div>
               <Link to="/register">
                 <div className="icon-text-container">
-                  <span className="material-icons">how_to_reg</span>
+                  <span className="material-symbols-outlined">how_to_reg</span>
                   <div>Signup</div>
                 </div>
               </Link>
