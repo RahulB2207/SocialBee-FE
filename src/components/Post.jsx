@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState ,useEffect} from 'react';
 import '../css/Home.css';
+import axios from 'axios';
 
 const Post = ({ post }) => {
+  const [isLike, setIsLike] = useState(false); 
+   useEffect(() => {
+    // Check if the post.likes object includes the current userId
+    const userId = localStorage.getItem("userId");
+    if (post.likes && post.likes.hasOwnProperty(userId)) {
+      setIsLike(true);
+    } else {
+      setIsLike(false);
+    }
+  }, [post]);
+
+  const likeHandler = (postId) => {
+    const userId = localStorage.getItem("userId");
+    const postIdString = String(postId);
+    try {
+      axios.patch(`http://localhost:3001/posts/${postIdString}/like`,
+      { userId: userId },
+      {
+        headers : {
+          "authorization" : localStorage.getItem('token')
+        }
+      }
+      );
+      setIsLike(!isLike);
+    } catch (err) {
+      console.log("Problem in like API", err);
+    }
+  };
+
   return (
     <div key={post._id} className="card-post">
       <div className="card-image">
@@ -10,7 +40,10 @@ const Post = ({ post }) => {
 
       <div className="card-content">
         <div className="card-icons">
-          <span className="material-symbols-rounded">favorite</span>
+          <span className={isLike ?`material-icons` : `material-symbols-rounded` }
+           onClick={() => likeHandler(post._id)}>
+            favorite
+          </span>
         </div>
         <div className="card-icons">
           <span className="material-symbols-rounded">mode_comment</span>
@@ -23,7 +56,9 @@ const Post = ({ post }) => {
         <div className="input-container">
           <input type="text" id="text" placeholder="Add comment......" />
         </div>
-        <div><button id = "post-btn">Post</button></div>
+        <div>
+          <button id="post-btn">Post</button>
+        </div>
       </div>
       <button id="btn">{post.userName}</button>
     </div>

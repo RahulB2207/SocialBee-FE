@@ -96,3 +96,10 @@
   font-size: 13px;
   font-weight: 300;
 }
+.material-icons{
+  color: rgba(255, 0, 0, 0.774);
+}
+.material-icons:hover,
+.material-symbols-rounded:hover{
+  cursor: pointer;
+}
