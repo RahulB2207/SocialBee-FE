@@ -17,7 +17,7 @@ function SideBar() {
             <div>
               <Link to="/">
                 <div className="icon-text-container">
-                <span class="material-symbols-rounded">
+                <span className="material-symbols-rounded">
 home
 </span>
                   <div>Home</div>
@@ -43,7 +43,7 @@ home
             <div>
               <Link to="/search">
                 <div className="icon-text-container">
-                  <span className="material-symbols-outlined">search</span>
+                  <span className="material-symbols-rounded">search</span>
                   <div>Search</div>
                 </div>
               </Link>
@@ -56,7 +56,7 @@ home
               }}
             >
               <div className="icon-text-container">
-                <span className="material-symbols-outlined">logout</span>
+                <span className="material-symbols-rounded">logout</span>
                 <div>Logout</div>
               </div>
             </Link>
@@ -67,7 +67,7 @@ home
             <div>
               <Link to="/login">
                 <div className="icon-text-container">
-                  <span className="material-symbols-outlined">login</span>
+                  <span className="material-symbols-rounded">login</span>
                   <div>Login</div>
                 </div>
               </Link>
@@ -75,7 +75,7 @@ home
             <div>
               <Link to="/register">
                 <div className="icon-text-container">
-                  <span className="material-symbols-outlined">how_to_reg</span>
+                  <span className="material-symbols-rounded">how_to_reg</span>
                   <div>Signup</div>
                 </div>
               </Link>
