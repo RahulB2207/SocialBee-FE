@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const Post = ({ post }) => {
   const [isLike, setIsLike] = useState(false); 
+  const[like,setLike] = useState(Object.keys(post.likes).length)
    useEffect(() => {
     // Check if the post.likes object includes the current userId
     const userId = localStorage.getItem("userId");
@@ -26,6 +27,7 @@ const Post = ({ post }) => {
         }
       }
       );
+      setLike(isLike ? like - 1 : like + 1);
       setIsLike(!isLike);
     } catch (err) {
       console.log("Problem in like API", err);
@@ -45,11 +47,12 @@ const Post = ({ post }) => {
             favorite
           </span>
         </div>
+        
         <div className="card-icons">
           <span className="material-symbols-rounded">mode_comment</span>
         </div>
       </div>
-
+      <div className='post-Likes'>{like}  likes</div>
       <div className="post-caption">{post.description}</div>
 
       <div className="comment-section">
