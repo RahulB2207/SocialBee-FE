@@ -18,8 +18,7 @@ useEffect(() => {
         }
       });
 
-      const result = res.data;
-      console.log(result);
+     
 
       setIsAuth(true);
     } catch (error) {

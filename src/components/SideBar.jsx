@@ -52,6 +52,7 @@ home
               to="/login"
               onClick={() => {
                 localStorage.removeItem('token');
+                localStorage.removeItem('userId')
                 setIsAuth(false);
               }}
             >

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Post from './Post';
 import axios from 'axios';
 import "../css/Home.css";
+import Rightbar from './Rightbar';
 
 const Home = ({setProgress}) => {
   const [posts, setPosts] = useState([]);
@@ -32,11 +33,19 @@ setProgress(60)
   }, []);
 
   return (
-    <div className='post-container'>
-      {posts.map((p) => (
-        <Post key={p._id} post={p} />
-      ))}
+    <div className="home-container">
+        <div className='post-container'>
+              {posts.map((p) => (
+                <Post key={p._id} post={p} />
+              ))}
+              
+          </div>
+          <div className='rightbar-container'>
+           <div id='highlighted'>  suggested for you</div>
+          <Rightbar/>
+          </div>
     </div>
+    
   );
 };
 

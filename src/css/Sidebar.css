@@ -72,7 +72,9 @@
 .icon-text-container:hover{
   background-color: rgb(247, 245, 245);
 }
-
+.icon-text-container.active{
+ border: 1px solid black;
+}
 
 .icon-text-container span {
   font-size:26px;

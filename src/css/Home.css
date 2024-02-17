@@ -1,10 +1,40 @@
 .post-container{
-  margin-left: 28%;
+  margin-left: 17%;
+
+}
+#highlighted{
+margin-bottom: 5px;
+color: rgba(128, 128, 128, 0.765);
+ 
+}
+.rightbar-container{
+  padding-top: 10px;
+  width: 18%;
+}
+.rightbar{
+  padding-bottom: 5px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-bar-data{
+  padding-right: 100px;
+}
+
+.right-bar-data-2 {
+  color: rgba(170, 19, 230, 0.733);
+  font-size: 13px;
+}
+.right-bar-data-2:hover{
+  cursor: pointer;
 }
 .post-Likes{
   margin-left: 6px;
 }
-
+.home-container{
+  display: flex;
+  justify-content: space-evenly;
+}
 
 .top-bar{
   display: flex;
