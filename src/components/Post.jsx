@@ -36,6 +36,11 @@ const Post = ({ post }) => {
 
   return (
     <div key={post._id} className="card-post">
+     
+      <div style={{display:'flex',alignItems:'center'}}>
+      <img  style={{width:'30px',height:'30px',borderRadius:'80px',marginRight:'10px'}} src="https://c4.wallpaperflare.com/wallpaper/692/93/295/women-actress-brunette-long-hair-wallpaper-preview.jpg" alt="" />
+        <p>{post.userName}</p>
+      </div>
       <div className="card-image">
         <img src={post.picturePath} alt="post" />
       </div>

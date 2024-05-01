@@ -58,6 +58,7 @@ const Rightbar = () => {
   const addFriend = async (friendId, index) => {
     try {
       const userId = localStorage.getItem("userId");
+      console.log(userId);
       const res = await axios.patch(
         `http://localhost:3001/users/${userId}/${friendId}`,
         null,

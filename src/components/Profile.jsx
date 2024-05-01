@@ -20,9 +20,18 @@ const Profile=({setProgress})=> {
     <div>
       <h1>Emma Watson</h1>
       <div  style={{display:'flex', justifyContent:"space-between"}}>
-        <h6>40post</h6>
+        <div>
+        <h3>3</h3>
+        <h6>post</h6>
+        </div>
+        <div>
+        <h3>10</h3>
         <h5>follower</h5>
+        </div>
+        <div>
+        <h3>20</h3>
         <h5>following</h5>
+        </div>
       </div>
     </div>
     </div>
